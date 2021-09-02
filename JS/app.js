@@ -101,7 +101,7 @@ const displayBook = books => {
         // clear cover showing
         bookCover.textContent = '';
 
-    // loop for every Books information
+    // loop for every books
     books.forEach(book => {
         const booksDiv = document.createElement('div');
         booksDiv.classList.add('col');
@@ -109,7 +109,8 @@ const displayBook = books => {
                 <div class="card h-100">
                     <div class="card-body">
                         <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg" class= "card-img-center rounded mx-auto d-block my-2">
-                        <h3 class="card-title fw-bold fs-5 ">${book.title}</h3>
+                        <h3 class="card-title fw-bold fs-3"
+                        style="font-family:Dancing Script">${book.title}</h3>
                         <h4 class="text-muted">Author : ${book.author_name}</h4>
                         <h5 class="fw-light text-muted ">Publlisher : ${book.publisher}</h5>
                         <h6 class="fw-light text-muted">Published : ${book.first_publish_year}</h6>
@@ -128,12 +129,12 @@ const displayBook = books => {
 }
 
 
-const displayCoverImg = coverImg => {
-    const coverImgUrl = `https://covers.openlibrary.org/b/id/${coverImg}-M.jpg`;
-    loadCover(coverImg);
+const displayDetails = details => {
+    const coverImgUrl = `https://covers.openlibrary.org/b/id/${details}-M.jpg`;
+    loadDetails(details);
 }
 
-const loadCover = showCover => {
+const loadDetails = showCover => {
      
         // clear cover showing
         bookCover.textContent = '';
