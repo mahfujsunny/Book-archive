@@ -1,0 +1,8 @@
+body {
+    background-color: #89fffd;
+}
+
+#loading-spinner {
+    display: none;
+    margin-left: 50%;
+}
